@@ -21,11 +21,11 @@
      {
       devShell =
         pkgs.devshell.mkShell {
-          name="aiken-app";
-          packages = [
-            pkgs.deno
-            pkgs.rnix-lsp
-            pkgs.aiken
+          name="hello-aiken";
+          packages = with pkgs; [
+            aiken
+            deno
+            rnix-lsp
           ];
         commands = [
             {
